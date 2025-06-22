@@ -6,8 +6,8 @@ theorem
   {True}
   x := 0;
   i := 0;
-  WHILE i \<noteq> b
-  INV {x = a * i}
+  WHILE i < b
+  INV {(0 \<le> i \<and> i \<le> b) \<and> x = a * i}
   DO
     x := x + a;
     i := i + 1
